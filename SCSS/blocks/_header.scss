@@ -1,0 +1,50 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 30px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #ffc107;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__phone {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__number {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
