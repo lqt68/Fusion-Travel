@@ -4,3 +4,57 @@
 @import 'blocks/_header';
 @import 'blocks/_intro';
 @import 'blocks/_about';
+
+body {
+    font-family: $font-main;
+    color: $color-text;
+    background-color: $color-bg;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+
+    &__title {
+        font-family: $font-title;
+        font-size: 36px;
+        font-weight: 500;
+        color: $color-text;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        color: $color-secondary;
+        line-height: 1.6;
+    }
+}
+
+.card {
+    background-color: $color-white;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+        border-color: transparent;
+    }
+}

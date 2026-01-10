@@ -17,20 +17,21 @@
 
     &__content {
         max-width: 800px;
+        position: relative;
+        bottom: 30px;
     }
 
     &__title {
         font-family: $font-title;
         font-size: 64px;
         font-weight: 700;
-        margin-bottom: 20px;
         text-transform: capitalize;
         letter-spacing: 1px;
     }
 
     &__subtitle {
         font-size: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         font-weight: 300;
     }
 
@@ -54,9 +55,51 @@
 
     &__video {
         position: absolute;
-        bottom: 50px;
-        left: 0;
+        bottom: 7%;
+        left: 20px;
         display: flex;
-        
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__play-btn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__video-text {
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+
+        span {
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
     }
 }
