@@ -260,14 +260,7 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.about__icon {
-  height: 40px;
-  width: auto;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  display: inline-block;
-}
-.about__card-title {
+.about__card .card__title {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -275,11 +268,18 @@ img {
   margin-bottom: 12px;
   text-transform: capitalize;
 }
-.about__card-text {
+.about__card .card__text {
   font-size: 14px;
   color: #999999;
   line-height: 1.6;
   margin: 0;
+}
+.about__card .card__icon {
+  height: 40px;
+  width: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 .reviews__header {
@@ -470,12 +470,12 @@ body {
           box-sizing: border-box;
 }
 
-.section-header {
+.module {
   text-align: center;
   max-width: 900px;
   margin: 0 auto 60px;
 }
-.section-header__title {
+.module__title {
   font-family: "Roboto", sans-serif;
   font-size: 50px;
   font-weight: 500;
@@ -483,7 +483,7 @@ body {
   margin-bottom: 10px;
   text-transform: capitalize;
 }
-.section-header__subtitle {
+.module__subtitle {
   font-size: 16px;
   color: #999999;
   line-height: 1.6;
@@ -506,8 +506,7 @@ body {
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   border-color: transparent;
 }
-
-.section {
+.section-padding {
   padding: 100px 0;
   background-color: #ffffff;
 }
