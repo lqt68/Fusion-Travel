@@ -35,23 +35,9 @@
         font-weight: 300;
     }
 
-    &__btn {
-        display: inline-block;
-        padding: 15px 40px;
-        background-color: #ffc107;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        border-radius: 30px;
-        text-transform: capitalize;
-        transition: all 0.3 ease;
-
-        &:hover {
-            background-color: #e0a800;
-            // transform: translate(-3px);
-        }
-    }
+    // &__btn {
+        
+    // }
 
     &__video {
         position: absolute;

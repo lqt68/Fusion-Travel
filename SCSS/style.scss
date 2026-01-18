@@ -6,6 +6,7 @@
 @import 'blocks/_reviews';
 @import 'blocks/_destinations';
 @import 'blocks/_blog';
+@import 'blocks/discount';
 
 body {
     font-family: $font-main;
@@ -42,6 +43,7 @@ body {
         font-size: 16px;
         color: $color-secondary;
         line-height: 1.6;
+        margin-bottom: 40px;
     }
 }
 
@@ -68,6 +70,24 @@ body {
 }
 
 .wrap {
-    padding: 100px 0;
+    padding-top: 100px;
     background-color: $color-bg;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ffc107;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: all 0.3 ease;
+
+    &:hover {
+        background-color: #e0a800;
+        // transform: translate(-3px);
+    }
 }
