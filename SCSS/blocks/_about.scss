@@ -1,7 +1,4 @@
 .about {
-    padding: 100px 0;
-    background-color: $color-bg;
-
     &__header {
         margin-bottom: 60px;
     }
@@ -11,6 +8,7 @@
         justify-content: center;
         gap: 40px;
         flex-wrap: wrap;
+        padding-top: 40px;
     }
 
     &__card {

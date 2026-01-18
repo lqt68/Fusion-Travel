@@ -4,7 +4,8 @@
 @import 'blocks/_intro';
 @import 'blocks/_about';
 @import 'blocks/_reviews';
-@import 'blocks/destinations';
+@import 'blocks/_destinations';
+@import 'blocks/_blog';
 
 body {
     font-family: $font-main;
@@ -59,14 +60,14 @@ body {
         border-color: transparent;
     }
 
-    &__title {
+    // &__title {
 
-    }
+    // }
 
-    &__text {}
+    // &__text {}
 }
 
-.section-padding {
+.wrap {
     padding: 100px 0;
     background-color: $color-bg;
 }
