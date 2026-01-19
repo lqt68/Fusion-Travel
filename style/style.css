@@ -799,6 +799,7 @@ img {
 }
 .footer__copyright {
   text-align: center;
+  padding-top: 20px;
 }
 .footer__copyright__subtitle {
   font-size: 12px;
