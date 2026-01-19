@@ -8,29 +8,31 @@
             position: relative;
             width: 100%;
             max-width: 440px;
+            margin-left: 33%;
         }
 
         &__input {
             width: 100%;
             height: 55px;
             padding: 0 20px 0 55px;
-            border: 1px solid #e5e5e5;
-            border-radius: 10px;
+            border: none;
+            // border: 1px solid #e5e5e5;
+            // border-radius: 10px;
             background-color: #fff;
             font-family: inherit;
             font-size: 16px;
             color: #333;
             outline: none;
-            transition: border-color 0.3s, box-shadow 0.3s;
+            // transition: border-color 0.3s, box-shadow 0.3s;
 
             &::placeholder {
                 color: #999;
             }
 
-            &:focus {
-                border-color: #ffc107;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            }
+            // &:focus {
+            //     border-color: #ffc107;
+            //     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            // }
         }
 
         &__icon {
@@ -54,13 +56,13 @@
     &__item {
         width: calc((100% - 60px) / 3);
 
-        @media (max-width: 900px) {
-            width: calc((100% - 30px) / 2);
-        }
+        // @media (max-width: 900px) {
+        //     width: calc((100% - 30px) / 2);
+        // }
 
-        @media (max-width: 600px) {
-            width: 100%;
-        }
+        // @media (max-width: 600px) {
+        //     width: 100%;
+        // }
     }
 
     &__link {

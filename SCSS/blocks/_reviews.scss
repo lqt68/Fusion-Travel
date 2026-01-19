@@ -46,6 +46,7 @@
         color: $color-secondary;
         line-height: 1.8;
         margin-bottom: 20px;
+        text-align: left;
     }
 
     &__name {
@@ -61,5 +62,11 @@
         display: block;
         font-size: 14px;
         color: $color-text;
+    }
+
+    &__author {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
     }
 }

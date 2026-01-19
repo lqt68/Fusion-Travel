@@ -1,0 +1,71 @@
+.footer {
+    padding: 80px 0 50px;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        width: 22%;
+    }
+
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 1.6;
+        transition: color 0.3s ease;
+
+        &--wrap {
+            max-width: 150px;
+        }
+
+        &:hover {
+            color: #ffc107;
+        }
+    }
+
+    &__images {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+
+        &__subtitle {
+            font-size: 12px;
+            color: #999;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+}
