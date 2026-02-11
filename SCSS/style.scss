@@ -8,6 +8,7 @@
 @import 'blocks/_blog';
 @import 'blocks/discount';
 @import 'blocks/footer';
+@import 'blocks/video-modal';
 
 body {
     font-family: $font-main;
@@ -44,7 +45,6 @@ body {
         font-size: 16px;
         color: $color-secondary;
         line-height: 1.6;
-        margin-bottom: 40px;
     }
 }
 
@@ -99,4 +99,54 @@ body {
     background-color: #e5e5e5;
     margin-top: 60px;
     margin-bottom: 30px;
+}
+
+/* --- ГЛОБАЛЬНІ СТИЛІ ДЛЯ ТОЧОК SLICK SLIDER --- */
+/* Цей код діє на всі слайдери на сайті */
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;
+    gap: 15px;
+
+    li {
+        margin: 0;
+        padding: 0;
+        width: 20px; 
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 10px; 
+            height: 10px;
+            padding: 0;
+            cursor: pointer;
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: #e5e5e5;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: none;
+
+            &:hover {
+                background-color: #d0d0d0;
+            }
+        }
+
+        &.slick-active button {
+            background-color: #ffc107;
+            // Ефект подвійної рамки
+            box-shadow: 0 0 0 3px #fff, 0 0 0 4px #ffc107;
+        }
+    }
 }

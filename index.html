@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fusion Travel</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -22,7 +25,7 @@
 
             <div class="header__contact">
                 <img class="header__phone" src="./img/phone.png" alt="phone.png">
-                <p class="header__number">Hotline: +516 260 0598</p>
+                <span class="header__number">Hotline: +516 260 0598</span>
             </div>
         </div>
     </header>
@@ -35,7 +38,7 @@
                 <a class="btn intro__btn" href="#">Plan your Trip</a>
             </div>
 
-            <a href="#" class="intro__video">
+            <a href="#" class="intro__video" id="openVideoBtn">
                 <div class="intro__play-btn">
                     <img class="intro__background" src="./img/play.png" alt="Play">
                 </div>
@@ -46,36 +49,89 @@
             </a>
         </section>
         
-        <section class="wrap">
+        <section class="about">
             <div class="container">
-                <div class="about">
-                    <div class="module">
-                        <h2 class="module__title">Welcome to fusion</h2> 
-                        <p class="module__subtitle">Nam consectetur elementum neque vitae condimentum. Aenean dignissim, turpis et tincidunt finibus, massa purus malesuada metus, a commodo velit magna nec nibh. Donec dictum fringilla tempus. Nunc rhoncus sapien lectus, non fermentum neque euismod quis. Phasellus sagittis tortor in accumsan 
-                        </p>
-
-                        <div class="about__content">
-                            <div class="card about__card">
-                                <img src="./img/Icon_plane.png" class="card__icon" alt="Icon_plane.png">
-                                <h3 class="card__title">Best Price Guarantee</h3>
-                                <p class="card__text">SpaceTeam bootstrapping user centered design sticky note convergence fund parallax 
-                                </p>
+                <div class="module">
+                    <h2 class="module__title">Welcome to Fusion</h2>
+                    <p class="module__subtitle">Nam consectetur elementum neque vitae condimentum...</p>
+                
+                    <div class="about__slider" id="aboutSlider">
+                        <div class="about__track">
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_plane.png" class="card__icon" alt="Plane">
+                                    <h3 class="card__title">Best Price Guarantee</h3>
+                                    <p class="card__text">SpaceTeam bootstrapping user centered design sticky note convergence.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="about__item">
+                                <div class="card about__card about__card">
+                                    <img src="./img/Icon_heart.png" class="card__icon" alt="Heart">
+                                    <h3 class="card__title">Best Travel Agency</h3>
+                                    <p class="card__text">User story Steve Jobs iterate human-centered design iterate pair programming.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_star.png" class="card__icon" alt="Star">
+                                    <h3 class="card__title">Trust & Safety</h3>
+                                    <p class="card__text">Thought leader cortado viral earned media long shadow actionable insight.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_plane.png" class="card__icon" alt="Plane">
+                                    <h3 class="card__title">Secure Booking</h3>
+                                    <p class="card__text">We ensure your booking is safe and secure with our new technology.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_heart.png" class="card__icon" alt="Heart">
+                                    <h3 class="card__title">Lovely Support</h3>
+                                    <p class="card__text">Our support team is always ready to help you with any questions.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_star.png" class="card__icon" alt="Star">
+                                    <h3 class="card__title">Five Star Hotels</h3>
+                                    <p class="card__text">We partner only with the best hotels to ensure your comfort.</p>
+                                </div>
                             </div>
 
-                            <div class="card about__card">
-                                <img src="./img/Icon_heart.png" class="card__icon" alt="Icon_heart.png">
-                                <h3 class="card__title">Best Travel Agency</h3>
-                                <p class="card__text">User story Steve Jobs Stev Jobs iterate human-centered design iterate pair progra ming 360 campaign.
-                                </p>
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_plane.png" class="card__icon" alt="Plane">
+                                    <h3 class="card__title">Fast Flights</h3>
+                                    <p class="card__text">Get to your destination faster with our optimized flight paths.</p>
+                                </div>
                             </div>
-
-                            <div class="card about__card">
-                                <img src="./img/Icon_star.png" class="card__icon" alt="Icon_star.png">
-                                <h3 class="card__title">Trust & Safety</h3>
-                                <p class="card__text">Thought leader cortado viral viral earned media long shadow actionable insight waterfall is so 2000
-                                </p>
+                        
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_heart.png" class="card__icon" alt="Heart">
+                                    <h3 class="card__title">Family Care</h3>
+                                    <p class="card__text">Special packages for families with children and pets.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="about__item">
+                                <div class="card about__card">
+                                    <img src="./img/Icon_star.png" class="card__icon" alt="Star">
+                                    <h3 class="card__title">Top Ratings</h3>
+                                    <p class="card__text">Our service is rated #1 by travelers around the world.</p>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="slider-dots" id="aboutDots"></div>
+                    
                     </div>
                 </div>
             </div>
@@ -244,23 +300,73 @@
                         </p>
 
                         <div class="reviews__content">
-                            <div class="card reviews__card">
-                                <div class="reviews__photo">
-                                    <img class="reviews__avatar" src="./img/243ц.jpg" alt="">
-                                </div>
 
-                                <div class="reviews__body">
-                                    <p class="reviews__text">
-                                        “Integrate 360 campaign viral disrupt pair programming latte paradigm hacker 360 campaign cortado bootstrapping. Thinker-maker-doer paradigm affordances viral bootstrapping ship it human-centered design.”
-                                    </p>
-                                
-                                    <div class="reviews__author">
-                                        <h4 class="reviews__name">Dimitri Vegas</h4>
-                                        <span class="reviews__location">London, England</span>
+                            <div class="reviews__quote reviews__quote--left"></div>
+
+                            <div class="reviews__slider" id="reviewsSlider">
+
+                                <div class="reviews__track">
+                                    <div class="reviews__item">
+                                        <div class="card reviews__card">
+                                            <div class="reviews__photo">
+                                                <img class="reviews__avatar" src="./img/243ц.jpg" alt="">
+                                            </div>
+
+                                            <div class="reviews__body">
+                                                <p class="reviews__text">
+                                                    Integrate 360 campaign viral disrupt pair programming latte paradigm hacker 360 campaign cortado bootstrapping. Thinker-maker-doer paradigm affordances viral bootstrapping ship it human-centered design waterfall is so 2000 and late responsive integrate parallax. 
+                                                </p>
+                                            
+                                                <div class="reviews__author">
+                                                    <h4 class="reviews__name">Dimitri Vegas</h4>
+                                                    <span class="reviews__location">London, England</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews__item">
+                                        <div class="card reviews__card">
+                                            <div class="reviews__photo">
+                                                <img class="reviews__avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                                            </div>
+                                            <div class="reviews__body">
+                                                <p class="reviews__text">
+                                                    “We worked with Fusion for 3 years. They are amazing! Highly recommended for everyone who wants high quality product.”
+                                                </p>
+                                                <div class="reviews__author">
+                                                    <h4 class="reviews__name">Steve Jobs</h4>
+                                                    <span class="reviews__location">California, USA</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews__item">
+                                        <div class="card reviews__card">
+                                            <div class="reviews__photo">
+                                                <img class="reviews__avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                                            </div>
+                                            <div class="reviews__body">
+                                                <p class="reviews__text">
+                                                    “Great service, fast support and clean code. I really like the design system they provided.”
+                                                </p>
+                                                <div class="reviews__author">
+                                                    <h4 class="reviews__name">Anna Kendric</h4>
+                                                    <span class="reviews__location">Kyiv, Ukraine</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="reviews__quote reviews__quote--right"></div>
+                            
                         </div>
+
+                        <div class="slider-dots" id="reviewsDots"></div>
+
                     </div>
                 </div>
             </div>
@@ -318,7 +424,29 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script></script>
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal__overlay" id="videoOverlay"></div>
+
+        <div class="video-modal__content">
+            <button class="video-modal__close" id="closeVideoBtn">×</button>
+
+            <div class="video-modal__body">
+                <iframe 
+                    id="youtubePlayer"
+                    width="100%" 
+                    height="100%" 
+                    src="" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./src/main.js"></script>
 </body>
 </html>

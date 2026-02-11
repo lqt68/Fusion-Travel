@@ -1,29 +1,85 @@
-.reviews { 
+.reviews {
+    padding: 100px 0;
+
     &__header {
         margin-bottom: 50px;
         text-align: center;
     }
 
     &__content {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-        flex-wrap: wrap;
+        position: relative;
+        // display: flex; -> Прибираємо, бо це ламає центрування слайдера
+        margin: 80px 0;
+        z-index: 1;
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden; 
+        width: 100%;
+        max-width: 770px; 
+        margin: 0 auto;   
+        padding-bottom: 20px; 
+    }
+
+    &__track {
+        display: flex; 
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        will-change: transform;
+    }
+
+    &__item {
+        flex: 0 0 100%; 
+        max-width: 100%;
+        outline: none;
+        padding: 0 10px; 
+        box-sizing: border-box;
+        
+        display: flex;         
+        justify-content: center;
+    }
+
+    &__quote {
+        position: absolute;
+        z-index: -1;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 150px;
+        color: #e5e5e5;
+        line-height: 1;
+
+        &--left {
+            top: -50px;
+            left: -140px;
+
+            &::before {
+                content: "\f10d";
+            }
+        }
+
+        &--right {
+            bottom: -50px;
+            right: -140px;
+
+            &::before {
+                content: "\f10e";
+            }
+        }
     }
 
     &__card {
-        flex: 1;
-        min-width: 480px;
-        display: flex; 
+        display: flex;
         align-items: flex-start;
         gap: 30px;
+        width: 100%;
     }
 
     &__photo {
         width: 190px;
         height: 190px;
         flex-shrink: 0;
-        border-radius: 5px;
+        border-radius: 5px; 
         background-color: #ccc;
         overflow: hidden;
 
@@ -39,18 +95,26 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        min-height: 190px; 
     }
 
     &__text {
         font-size: 15px;
-        color: $color-secondary;
+        color: #666; 
         line-height: 1.8;
         margin-bottom: 20px;
         text-align: left;
+        font-style: italic;
+    }
+
+    &__author {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
     }
 
     &__name {
-        font-family: $font-title;
+        font-family: $font-title; 
         font-size: 16px;
         font-weight: 700;
         color: $color-primary;
@@ -61,12 +125,26 @@
     &__location {
         display: block;
         font-size: 14px;
-        color: $color-text;
+        color: #333;
+    }
+}
+
+@media (max-width: 767px) {
+    .reviews__card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    &__author {
-        display: flex;
-        text-align: left;
-        flex-direction: column;
+    .reviews__text {
+        text-align: center;
+    }
+    
+    .reviews__author {
+        align-items: center;
+    }
+
+    .reviews__quote {
+        display: none;
     }
 }
