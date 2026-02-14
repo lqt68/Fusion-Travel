@@ -71,7 +71,7 @@ body {
 }
 
 .wrap {
-    padding-top: 100px;
+    padding-top: 80px;
     background-color: $color-bg;
 }
 
@@ -91,6 +91,10 @@ body {
         background-color: #e0a800;
         // transform: translate(-3px);
     }
+
+    &:active {
+        color: #d39e00;
+    }
 }
 
 .grey-line {
@@ -100,9 +104,6 @@ body {
     margin-top: 60px;
     margin-bottom: 30px;
 }
-
-/* --- ГЛОБАЛЬНІ СТИЛІ ДЛЯ ТОЧОК SLICK SLIDER --- */
-/* Цей код діє на всі слайдери на сайті */
 
 .slick-dots {
     display: flex;

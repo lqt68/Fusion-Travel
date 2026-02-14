@@ -28,17 +28,33 @@
         &:hover {
             color: #ffc107;
         }
+
+        &:active {
+            color: #d39e00;
+        }
     }
 
     &__contact {
         display: flex;
         align-items: center;
         gap: 10px;
+        color: #fff;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #ffc107;
+        }
+
+        &:active {
+            color: #d39e00;
+        }
     }
 
     &__phone {
         width: 20px;
         height: 20px;
+        fill: currentColor;
     }
 
     &__number {
@@ -46,5 +62,6 @@
         text-decoration: none;
         font-weight: 700;
         font-size: 16px;
+        color: inherit;
     }
 }

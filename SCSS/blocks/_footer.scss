@@ -1,5 +1,5 @@
 .footer {
-    padding: 80px 0 50px;
+    padding: 40px 0 50px;
 
     &__content {
         display: flex;
@@ -40,21 +40,54 @@
         &:hover {
             color: #ffc107;
         }
+
+        &:active {
+            color: #d39e00;
+        }
     }
 
     &__images {
         display: flex;
-        gap: 15px;
+        gap: 10px;
+        align-items: center;
     }
 
     &__icon {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;  
+        height: 44px;
+        border-radius: 50%;
+
+        background-color: #666; 
+        color: #fff;            
+        
+        transition: all 0.3s ease;
+        text-decoration: none;
         
         transition: transform 0.3s ease;
         &:hover {
+            background-color: #ffc107;
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        &:active {
+            background-color: #d39e00;
+            transform: translateY(0) scale(0.95);
+            box-shadow: none;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+            transform: scale(1.1);
         }
     }
 

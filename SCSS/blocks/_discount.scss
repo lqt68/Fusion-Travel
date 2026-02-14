@@ -29,5 +29,10 @@
             // transform: translateY(-3px);
             border-color: #fff;
         }
+
+        &:active {
+            background-color: #d39e00;
+            color: #fff;
+        }
     }
 }

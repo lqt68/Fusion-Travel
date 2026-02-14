@@ -1,5 +1,5 @@
 .about {
-    padding: 100px 0;
+    padding-top: 100px;
 
     &__header {
         margin-bottom: 60px;
@@ -7,6 +7,7 @@
     }
 
     &__slider {
+        padding-top: 40px;
         width: 100%;
         overflow: hidden; 
         position: relative;
