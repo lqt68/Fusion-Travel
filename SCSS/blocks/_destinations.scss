@@ -7,6 +7,7 @@
 
         &__wrap {
             position: relative;
+            z-index: 100;
             width: 100%;
             max-width: 440px;
             margin-left: 33%;
@@ -24,16 +25,63 @@
             font-size: 16px;
             color: #333;
             outline: none;
-            // transition: border-color 0.3s, box-shadow 0.3s;
+            transition: border-radius 0.3s;
+                &:focus {
+                     border-color: #ffc107; // Жовта рамка при наборі
+                }
 
             &::placeholder {
                 color: #999;
             }
+        }
 
-            // &:focus {
-            //     border-color: #ffc107;
-            //     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            // }
+        &__results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 200;
+
+            &.active {
+                display: block;
+            }
+
+            li {
+                padding: 12px 20px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                border-bottom: 1px solid #eee;
+                transition: background 0.2s;
+
+                &:last-child { border-bottom: none; }
+                &:hover { background-color: #fff8e1; }
+
+                img {
+                    width: 30px !important;
+                    height: 20px !important;
+                    object-fit: cover;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    flex-shrink: 0;
+                }
+
+                span {
+                    font-size: 15px;
+                    color: #333;
+                    font-weight: 500;
+                }
+            }
         }
 
         &__icon {

@@ -35,6 +35,12 @@
 
     <main>
         <section class="intro">
+            <video class="intro__bg-video" autoplay muted loop playsinline poster="./img/header-bg.jpg">
+                <source src="https://videos.pexels.com/video-files/4133023/4133023-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+
+            <div class="intro__overlay"></div>
+
             <div class="container intro__content">
                 <h1 class="intro__title">Fusion Travel</h1>
                 <p class="intro__subtitle">Lets Discover The World Together</p>
@@ -150,7 +156,8 @@
                         <form class="search">
                             <div class="search__wrap">
                                 <img class="search__icon" src="./img/Search.png" class="destinations__icon" alt="Search">
-                                <input class="search__input" type="text" class="destinations__input" placeholder="Search">
+                                <input id="destinationInput" class="search__input" type="text" class="destinations__input" placeholder="Search">
+                                <ul id="destinationResults" class="search__results"></ul>
                             </div>
                         </form>
 
@@ -231,13 +238,13 @@
                         <div class="blog__info">
                             <div class="blog__card blog__item-1">
                                 <div class="blog__box">
-                                    <img class="blog__icon" src="./img/stupib.jpg" alt="stupib">
+                                    <img class="blog__icon" src="./img/news1.jpg" alt="news1">
                                 </div>
                             </div>
 
                             <div class="blog__card blog__card--column blog__item-2">
                                 <div class="blog__box">
-                                    <img class="blog__icon" src="./img/Urahara Kisuke.jpg" alt="">
+                                    <img class="blog__icon" src="./img/news2.jpg" alt="news2">
                                 </div>
 
                                 <div class="blog__desc">
@@ -249,7 +256,7 @@
 
                             <div class="blog__card blog__item-3">
                                 <div class="blog__box">
-                                    <img class="blog__icon" src="./img/Andrey.jpg" alt="">
+                                    <img class="blog__icon" src="./img/news3.jpg" alt="news3">
                                 </div>
                             </div>
 
@@ -261,19 +268,19 @@
                                 </div>
 
                                 <div class="blog__box">
-                                    <img class="blog__icon" src="./img/Ptrk.jpg" alt="">
+                                    <img class="blog__icon" src="./img/news4.jpg" alt="news4">
                                 </div>
                             </div>
 
                             <div class="blog__card blog__item-5">
                                 <div class="blog__box">
-                                    <img class="blog__icon" src="./img/kisuke.jpg" alt="">
+                                    <img class="blog__icon" src="./img/news5.jpeg" alt="news5">
                                 </div>
                             </div>
 
                             <div class="blog__card blog__card--column blog__item-6">
                                 <div class="blog__box">
-                                    <img class="blog__icon" src="./img/dog.jpg" alt="">
+                                    <img class="blog__icon" src="./img/news6.avif" alt="news6">
                                 </div>
 
                                 <div class="blog__desc">
@@ -299,77 +306,22 @@
                 <div class="reviews">
                     <div class="module">
                         <h2 class="module__title">What Our Client Says</h2>
-                        <p class="module__subtitle">People’s sharing their thought about our works
-                        </p>
-
+                        <p class="module__subtitle">People’s sharing their thought about our works</p>
+                    
                         <div class="reviews__content">
-
+                        
                             <div class="reviews__quote reviews__quote--left"></div>
-
+                        
                             <div class="reviews__slider" id="reviewsSlider">
-
-                                <div class="reviews__track">
-                                    <div class="reviews__item">
-                                        <div class="card reviews__card">
-                                            <div class="reviews__photo">
-                                                <img class="reviews__avatar" src="./img/243ц.jpg" alt="">
-                                            </div>
-
-                                            <div class="reviews__body">
-                                                <p class="reviews__text">
-                                                    Integrate 360 campaign viral disrupt pair programming latte paradigm hacker 360 campaign cortado bootstrapping. Thinker-maker-doer paradigm affordances viral bootstrapping ship it human-centered design waterfall is so 2000 and late responsive integrate parallax. 
-                                                </p>
-                                            
-                                                <div class="reviews__author">
-                                                    <h4 class="reviews__name">Dimitri Vegas</h4>
-                                                    <span class="reviews__location">London, England</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="reviews__item">
-                                        <div class="card reviews__card">
-                                            <div class="reviews__photo">
-                                                <img class="reviews__avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-                                            </div>
-                                            <div class="reviews__body">
-                                                <p class="reviews__text">
-                                                    “We worked with Fusion for 3 years. They are amazing! Highly recommended for everyone who wants high quality product.”
-                                                </p>
-                                                <div class="reviews__author">
-                                                    <h4 class="reviews__name">Steve Jobs</h4>
-                                                    <span class="reviews__location">California, USA</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="reviews__item">
-                                        <div class="card reviews__card">
-                                            <div class="reviews__photo">
-                                                <img class="reviews__avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-                                            </div>
-                                            <div class="reviews__body">
-                                                <p class="reviews__text">
-                                                    “Great service, fast support and clean code. I really like the design system they provided.”
-                                                </p>
-                                                <div class="reviews__author">
-                                                    <h4 class="reviews__name">Anna Kendric</h4>
-                                                    <span class="reviews__location">Kyiv, Ukraine</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="reviews__track"></div>
                             </div>
-
+                        
                             <div class="reviews__quote reviews__quote--right"></div>
                             
                         </div>
-
+                    
                         <div class="slider-dots" id="reviewsDots"></div>
-
+                    
                     </div>
                 </div>
             </div>
